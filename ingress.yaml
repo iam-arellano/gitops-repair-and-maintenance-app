@@ -5,7 +5,7 @@ metadata:
 
 spec:
   rules:
-  - host: "rms.app"
+  - host: "my.rms"
     http:
       paths:
       - pathType: Prefix
