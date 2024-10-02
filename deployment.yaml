@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-rms
+  labels:
+    app: app-rms
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app-rms
+  template:
+    metadata:
+      labels:
+        app: app-rms
+    spec:
+      containers:
+      - name: c-rms
+        image: raemondarellano/rms-app:1.0.0
+        ports:
+        - containerPort: 80 
