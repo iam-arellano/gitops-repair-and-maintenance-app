@@ -14,7 +14,7 @@ pipeline {
 
         stage("Checkout from SCM") {
                steps {
-                   git branch: 'main', credentialsId: 'github', url: 'https://github.com/iam-arellano/gitops-carvilla.git'                 
+                   git branch: 'main', credentialsId: 'github', url: 'https://github.com/iam-arellano/gitops-repair-and-maintenance-app.git'                 
                 }
            }
          stage("Update the Deployment Tags") {
@@ -36,7 +36,7 @@ pipeline {
                    git commit -m "Updated Deployment Manifest"
                 """
                 withCredentials([gitUsernamePassword(credentialsId: 'github_token', gitToolName: 'Default')]) {
-                  sh "git push https://github.com/iam-arellano/gitops-carvilla.git  main"
+                  sh "git push https://github.com/iam-arellano/gitops-repair-and-maintenance-app.git  main"
                 }
             }
         }
