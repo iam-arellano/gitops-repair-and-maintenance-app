@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: c-rms
-        image: raemondarellano/rms-app:1.0.0-5
+        image: raemondarellano/rms-app:1.0.0-6
         ports:
         - containerPort: 80 
