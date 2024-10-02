@@ -5,7 +5,7 @@ metadata:
 
 spec:
   rules:
-  - host: "my.carvilla"
+  - host: "rms.com"
     http:
       paths:
       - pathType: Prefix
